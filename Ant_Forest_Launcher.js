@@ -1303,7 +1303,7 @@ let $$init = {
                         fri: {
                             in_page_rex: new RegExp(
                                 /来浇过水.+|(帮忙)?收取\s?\d+g/.source + "|" +
-                                /赠送的\s?\d+g\s?.*能量|点击加载更多/.source
+                                /给予礼物的\s?\d+g\s?.*能量|点击加载更多|点击展开好友动态/.source
                             ),
                             in_page_rex_spe: /今天|昨天|\d{2}-\d{2}/, // > cY(0.85)
                             isInPage() {
@@ -5480,7 +5480,7 @@ let $$af = {
                                     $$flag.avail_clicked_pick = act === "pick";
                                     $$flag.avail_clicked_help = act === "help";
 
-                                    _ready() && $$link(_click).$(_stat);
+                                    /*_ready() &&*/ $$link(_click).$(_stat);
 
                                     // tool function(s) //
 
